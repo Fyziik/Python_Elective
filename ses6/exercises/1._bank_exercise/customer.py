@@ -1,14 +1,11 @@
 class Customer:
 
-    def __init__(self, name, age=None):
-        self.name = name
-        self.age = age
+    def __init__(self, *args):
 
-    def change_information(self, name, age):
-        self.name = name
-        self.age = age
+        if len(args) == 1:
+            self.name = args[0]
+            self.age = None
 
-    
-
-    def __str__(self):
-        return self.name + " " + str(self.age)
+        elif len(args) == 2:
+            self.name = args[0]
+            self.age = args[1]

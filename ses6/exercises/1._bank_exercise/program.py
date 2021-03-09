@@ -34,7 +34,8 @@ while(True):
     customer_created = make_customer(user_choice_of_customer)
 
     #Create account & add to bank
-    bank.add_account(make_account(customer_created))
+    #bank.add_account(make_account(customer_created))
+    bank.accounts.append(make_account(customer_created))
         
     print(bank)
 

@@ -5,13 +5,11 @@ class Bank:
         self.accounts = []
 
 
-    def add_account(self, account):
-        self.accounts.append(account)
-
-
     def __str__(self):
         tmp = ""
         for element in self.accounts:
-            tmp += element.get_customer() + '\n' + element.get_balance() + '\n' + element.get_acc_number() + '\n'
+            tmp += "*----------------------------*" + '\n'
+            tmp += "Name: " + element.customer.name + '\n' "Age: " + str(element.customer.age)  + '\n' + "Balance: " + str(element.balance) + '\n' + "Account number: " + str(element.acc_number) + '\n'
+            tmp += "*----------------------------*" + '\n \n'
         return tmp
         
